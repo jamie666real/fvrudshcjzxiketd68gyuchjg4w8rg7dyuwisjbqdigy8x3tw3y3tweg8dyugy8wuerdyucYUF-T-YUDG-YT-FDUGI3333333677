@@ -3,314 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Mastery | Complete Beginner's Interactive Guide</title>
+    <title>CodeStart | Interactive Developer Courses</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://jsdelivr.net"></script>
+    <style>
+        .hero-cta {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--dark);
+            font-weight: 700;
+            text-decoration: none;
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+            transition: transform 0.15s, background 0.2s;
+        }
+
+        .hero-cta:hover {
+            background: #fde047;
+            transform: translateY(-2px);
+        }
+
+        .course-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 2px solid var(--border);
+            transition: border-color 0.2s;
+        }
+
+        .course-card:hover {
+            border-color: var(--primary);
+        }
+
+        .course-link {
+            display: inline-block;
+            margin-top: 1rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .course-link:hover {
+            background: var(--primary-dark);
+        }
+
+        .badge-ready {
+            display: inline-block;
+            background: #dcfce7;
+            color: #166534;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .badge-soon {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #475569;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <h1>Learn <span>Python</span> From Scratch</h1>
-        <p>A complete, interactive handbook for beginner developers. Read the concepts, run real Python code in your browser, and build your first projects.</p>
-        <div id="py-status" class="status-badge">⏳ Loading interactive Python engine...</div>
+        <h1>Learn to <span>Code</span> Interactively</h1>
+        <p>Zero setup required. Read clear, beginner-friendly guides and run real code directly inside your web browser.</p>
+        <a href="learn/python/index.html" class="hero-cta">Start Learning Python &rarr;</a>
     </header>
 
     <nav>
-        <a href="#what-is-python">1. What is Python?</a>
-        <a href="#setup">2. Setup & Tools</a>
-        <a href="#data-types">3. Variables & Data</a>
-        <a href="#collections">4. Lists & Dicts</a>
-        <a href="#control-flow">5. Logic & Loops</a>
-        <a href="#functions">6. Functions</a>
-        <a href="#ecosystem">7. Libraries & Projects</a>
+        <a href="index.html">Home</a>
+        <a href="learn/python/index.html">Python Course</a>
+        <a href="#tracks">All Tracks</a>
     </nav>
 
     <main>
-        <section id="what-is-python">
-            <h2>1. What is Python & How Does It Work?</h2>
-            <p><strong>Python</strong> is a high-level, interpreted, general-purpose programming language created by Guido van Rossum and first released in 1991. Its design philosophy emphasizes code readability with its notable use of significant indentation.</p>
+        <section id="tracks">
+            <h2>Available Learning Tracks</h2>
+            <p>Pick a programming language below to begin your hands-on lessons and browser-based coding challenges.</p>
 
             <div class="grid-2">
-                <div class="card">
-                    <h4>Interpreted Language</h4>
-                    <p>Unlike C++ or Java, you don't need to compile Python code into machine language before running it. An <strong>interpreter</strong> reads and executes your code line-by-line, making testing and debugging fast.</p>
+                <!-- Active Python Course -->
+                <div class="card course-card">
+                    <div>
+                        <span class="badge-ready">Available Now</span>
+                        <h4>Python for Beginners</h4>
+                        <p>Learn Python from scratch: variables, data types, lists, dictionaries, loops, functions, and real starter projects—complete with a live in-browser Python runner.</p>
+                    </div>
+                    <a href="learn/python/index.html" class="course-link">Open Python Course &rarr;</a>
                 </div>
-                <div class="card">
-                    <h4>Dynamically Typed</h4>
-                    <p>You don't have to declare what type of data a variable holds (like text or numbers) beforehand. Python figures it out automatically while the program runs.</p>
-                </div>
-                <div class="card">
-                    <h4>"Batteries Included"</h4>
-                    <p>Python ships with a massive <strong>Standard Library</strong> containing pre-written tools for math, working with files, generating random numbers, dates, and web requests.</p>
-                </div>
-                <div class="card">
-                    <h4>Where is Python Used?</h4>
-                    <p>Artificial Intelligence (PyTorch, TensorFlow), Data Science (Pandas), Web Backends (Django, FastAPI), Cybersecurity, and Task Automation.</p>
+
+                <!-- Placeholder for Future Expansion -->
+                <div class="card course-card">
+                    <div>
+                        <span class="badge-soon">Coming Soon</span>
+                        <h4>Web Development Basics</h4>
+                        <p>Master HTML, CSS, and JavaScript fundamentals to build and style your own interactive websites from the ground up.</p>
+                    </div>
+                    <a href="learn/python/index.html" class="course-link" style="background: #64748b;">Start with Python Instead</a>
                 </div>
             </div>
         </section>
 
-        <section id="setup">
-            <h2>2. Setting Up Your Local Environment</h2>
-            <p>While you can practice right here on this page, real-world development happens on your computer. Follow these steps to set up a professional workflow:</p>
-            <ol>
-                <li><strong>Install Python:</strong> Visit <code>python.org</code> and download the latest Python 3 installer. <em>Important:</em> On Windows, check the box labeled <strong>"Add python.exe to PATH"</strong> on the very first screen.</li>
-                <li><strong>Verify in Terminal:</strong> Open your Command Prompt (Windows) or Terminal (Mac/Linux) and type <code>python --version</code> (or <code>python3 --version</code>). You should see a version number like <code>Python 3.12.x</code>.</li>
-                <li><strong>Choose an IDE / Code Editor:</strong> Install <strong>Visual Studio Code (VS Code)</strong> and add the official Microsoft <em>Python Extension</em>. It gives you syntax highlighting, autocomplete, and a built-in terminal.</li>
-                <li><strong>Create & Run a File:</strong> Save a file as <code>app.py</code>, write <code>print("Ready!")</code> inside, and run <code>python app.py</code> in your terminal.</li>
-            </ol>
-            <div class="tip-box">
-                <strong>Golden Rule of Python Syntax:</strong> Python uses <strong>indentation (4 spaces)</strong> instead of curly braces <code>{}</code> to define blocks of code. Mixing tabs and spaces or indenting inconsistently will cause an <code>IndentationError</code>.
-            </div>
-        </section>
-        <section id="data-types">
-            <h2>3. Variables, Data Types & Strings</h2>
-            <p>A <strong>variable</strong> is a name attached to a piece of data stored in your computer's memory. In Python, variable names should use <code>snake_case</code> (all lowercase words separated by underscores).</p>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Data Type</th>
-                        <th>Python Keyword</th>
-                        <th>Example</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>String</strong></td>
-                        <td><code>str</code></td>
-                        <td><code>"Hello"</code></td>
-                        <td>Text enclosed in single or double quotes.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Integer</strong></td>
-                        <td><code>int</code></td>
-                        <td><code>42</code></td>
-                        <td>Whole numbers (positive or negative).</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Float</strong></td>
-                        <td><code>float</code></td>
-                        <td><code>19.99</code></td>
-                        <td>Numbers with a decimal point.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Boolean</strong></td>
-                        <td><code>bool</code></td>
-                        <td><code>True</code> / <code>False</code></td>
-                        <td>Logical truth values (must be capitalized).</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h3>Modern String Formatting (f-strings)</h3>
-            <p>Put the letter <code>f</code> before your opening quote to inject variables directly inside curly braces <code>{}</code>:</p>
-            <div class="code-container">
-                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                <pre><code>username = "Maya"
-score = 98.5
-print(f"Player {username} scored {score}% on the test!")</code></pre>
-            </div>
-
-            <div class="exercise-box">
-                <div class="exercise-header">
-                    <h4>Interactive Exercise 1: Variables & Math</h4>
-                    <span class="exercise-tag">Try It Yourself</span>
-                </div>
-                <p>Create two variables: <code>price = 15</code> and <code>quantity = 4</code>. Calculate the <code>total</code>, and use an <strong>f-string</strong> to print: <code>The total cost is $60</code>.</p>
-                <textarea class="code-editor" id="code-1">price = 15
-quantity = 4
-# Write your code below:
-</textarea>
-                <div class="btn-group">
-                    <button class="run-btn" onclick="runPython('code-1', 'out-1')">▶ Run Code</button>
-                    <button class="hint-btn" onclick="toggleHint('hint-1')">Show Hint</button>
-                </div>
-                <div class="hint-text" id="hint-1">Multiply using <code>*</code>: <code>total = price * quantity</code>, then use <code>print(f"The total cost is ${total}")</code>.</div>
-                <div class="console-output" id="out-1">Output will appear here...</div>
-            </div>
-        </section>
-
-        <section id="collections">
-            <h2>4. Data Structures: Lists & Dictionaries</h2>
-            <p>When you need to store multiple items together, Python provides built-in data structures.</p>
-
-            <h3>Lists (Ordered Collections)</h3>
-            <p>Lists use square brackets <code>[]</code> and are <strong>zero-indexed</strong> (the first item is at position <code>0</code>).</p>
-            <div class="code-container">
-                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                <pre><code>languages = ["Python", "JavaScript", "Rust"]
-print(languages[0])          # Outputs: Python
-languages.append("Go")       # Adds "Go" to the end
-print(len(languages))        # Outputs: 4</code></pre>
-            </div>
-
-            <h3>Dictionaries (Key-Value Pairs)</h3>
-            <p>Dictionaries use curly braces <code>{}</code> to map unique keys to values—just like a real dictionary maps words to definitions.</p>
-            <div class="code-container">
-                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                <pre><code>developer = {
-    "name": "Jordan",
-    "role": "Backend Engineer",
-    "experience_years": 3
-}
-print(developer["role"])     # Outputs: Backend Engineer
-developer["city"] = "Austin" # Adds a new key-value pair</code></pre>
-            </div>
-
-            <div class="exercise-box">
-                <div class="exercise-header">
-                    <h4>Interactive Exercise 2: Working with Lists</h4>
-                    <span class="exercise-tag">Try It Yourself</span>
-                </div>
-                <p>Add <code>"grapes"</code> to the <code>fruits</code> list using <code>.append()</code>, then print the <strong>second item</strong> in the list (<code>"banana"</code>) and the entire updated list.</p>
-                <textarea class="code-editor" id="code-2">fruits = ["apple", "banana", "cherry"]
-# Add "grapes" and print the second item + full list:
-</textarea>
-                <div class="btn-group">
-                    <button class="run-btn" onclick="runPython('code-2', 'out-2')">▶ Run Code</button>
-                    <button class="hint-btn" onclick="toggleHint('hint-2')">Show Hint</button>
-                </div>
-                <div class="hint-text" id="hint-2">Remember Python counts starting at 0! So the second item is <code>fruits[1]</code>.</div>
-                <div class="console-output" id="out-2">Output will appear here...</div>
-            </div>
-        </section>
-
-        <section id="control-flow">
-            <h2>5. Conditionals & Loops</h2>
-            <p>Control flow determines the order in which your code executes based on conditions or repetition.</p>
-
-            <h3>If, Elif, and Else</h3>
-            <p>Comparison operators include <code>==</code> (equal to), <code>!=</code> (not equal), <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, and <code>&lt;=</code>.</p>
-            <div class="code-container">
-                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                <pre><code>battery = 15
-
-if battery > 50:
-    print("Battery is healthy.")
-elif battery > 20:
-    print("Battery is getting low.")
-else:
-    print("Plug in your charger immediately!")</code></pre>
-            </div>
-
-            <h3>For Loops & While Loops</h3>
-            <p>Use a <code>for</code> loop to iterate over a list or a range of numbers, and a <code>while</code> loop to repeat code as long as a condition remains <code>True</code>.</p>
-            <div class="code-container">
-                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                <pre><code># Loop through a range of numbers (1 to 3)
-for number in range(1, 4):
-    print(f"Countdown: {number}")
-
-# Loop through a list
-tasks = ["Code", "Test", "Deploy"]
-for task in tasks:
-    print(f"Completed: {task}")</code></pre>
-            </div>
-
-            <div class="exercise-box">
-                <div class="exercise-header">
-                    <h4>Interactive Exercise 3: Loops + Conditionals</h4>
-                    <span class="exercise-tag">Try It Yourself</span>
-                </div>
-                <p>Loop through the <code>numbers</code> list below. Use an <code>if</code> statement inside the loop to print <strong>only numbers greater than 10</strong>.</p>
-                <textarea class="code-editor" id="code-3">numbers = [4, 15, 8, 23, 10, 42]
-
-for num in numbers:
-    # Check if num is greater than 10 and print it
-</textarea>
-                <div class="btn-group">
-                    <button class="run-btn" onclick="runPython('code-3', 'out-3')">▶ Run Code</button>
-                    <button class="hint-btn" onclick="toggleHint('hint-3')">Show Hint</button>
-                </div>
-                <div class="hint-text" id="hint-3">Inside the <code>for</code> loop, indent 4 spaces and write <code>if num > 10:</code>, then indent 8 spaces for <code>print(num)</code>.</div>
-                <div class="console-output" id="out-3">Output will appear here...</div>
-            </div>
-        </section>
-        <section id="functions">
-            <h2>6. Writing Reusable Functions</h2>
-            <p>A <strong>function</strong> is a reusable block of code that performs a specific task. You define it once with <code>def</code> and call it whenever you need it. Use <code>return</code> to send a result back from the function.</p>
-
-            <div class="code-container">
-                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                <pre><code>def calculate_tax(amount, tax_rate=0.08):
-    """Calculates total price including tax."""
-    total = amount + (amount * tax_rate)
-    return round(total, 2)
-
-# Calling the function with different inputs
-print(calculate_tax(100))        # Uses default 8% tax -> 108.0
-print(calculate_tax(100, 0.10))  # Overrides with 10% tax -> 110.0</code></pre>
-            </div>
-
-            <div class="exercise-box">
-                <div class="exercise-header">
-                    <h4>Interactive Exercise 4: Build a Function</h4>
-                    <span class="exercise-tag">Challenge</span>
-                </div>
-                <p>Complete the function <code>is_even(number)</code> so that it returns <code>True</code> if a number is even, and <code>False</code> if it is odd. (Tip: The modulo operator <code>%</code> gives the remainder of division—an even number divided by 2 has a remainder of <code>0</code>).</p>
-                <textarea class="code-editor" id="code-4">def is_even(number):
-    # Return True if number % 2 == 0, else False
-    pass
-
-# Test your function:
-print("Is 8 even?", is_even(8))
-print("Is 7 even?", is_even(7))</textarea>
-                <div class="btn-group">
-                    <button class="run-btn" onclick="runPython('code-4', 'out-4')">▶ Run Code</button>
-                    <button class="hint-btn" onclick="toggleHint('hint-4')">Show Hint</button>
-                </div>
-                <div class="hint-text" id="hint-4">Replace <code>pass</code> with <code>return number % 2 == 0</code>!</div>
-                <div class="console-output" id="out-4">Output will appear here...</div>
-            </div>
-        </section>
-
-        <section id="ecosystem">
-            <h2>7. Next Steps: Debugging, Libraries & Projects</h2>
-
-            <h3>How to Read Python Error Messages</h3>
-            <p>Every developer hits errors daily. When Python crashes, read the <strong>Traceback from the bottom up</strong>—the very last line tells you what went wrong and which line number caused it:</p>
-            <ul>
-                <li><code>SyntaxError</code>: You missed a colon <code>:</code>, parenthesis <code>)</code>, or quote <code>"</code>.</li>
-                <li><code>NameError</code>: You used a variable or function name that hasn't been defined yet (check for typos!).</li>
-                <li><code>TypeError</code>: You tried to combine incompatible types (e.g., adding a string and an integer like <code>"Age: " + 25</code>).</li>
-            </ul>
-
-            <h3>Using External Packages with <code>pip</code></h3>
-            <p>Python's biggest superpower is <strong>PyPI</strong> (the Python Package Index), which hosts over 500,000 free libraries. You install them from your terminal using <code>pip</code>:</p>
-            <div class="code-container">
-                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                <pre><code># Run this in your computer's terminal, not inside a .py file:
-pip install requests</code></pre>
-            </div>
-
-            <h3>4 Beginner Projects to Build Next</h3>
+        <section>
+            <h2>How This Platform Works</h2>
             <div class="grid-2">
                 <div class="card">
-                    <h4>1. Number Guessing Game</h4>
-                    <p>Use Python's built-in <code>random</code> module to pick a secret number and give the user hints ("Too high!" or "Too low!") inside a <code>while</code> loop.</p>
+                    <h4>1. Clear Explanations</h4>
+                    <p>Every concept is broken down into plain English with practical, copy-ready examples.</p>
                 </div>
                 <div class="card">
-                    <h4>2. CLI To-Do List Manager</h4>
-                    <p>Practice lists, loops, and file handling by building a terminal app that saves tasks to a <code>tasks.txt</code> file.</p>
-                </div>
-                <div class="card">
-                    <h4>3. Password Generator</h4>
-                    <p>Combine the <code>random</code> and <code>string</code> modules to generate strong, customizable passwords.</p>
-                </div>
-                <div class="card">
-                    <h4>4. Live Weather Fetcher</h4>
-                    <p>Use the <code>requests</code> library to pull live JSON weather data from a public API and display the forecast.</p>
+                    <h4>2. Live Browser Execution</h4>
+                    <p>Write and run real code right inside each lesson using WebAssembly—no complex setup needed to start practicing.</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>Interactive Python Learning Hub &bull; Practice daily, read error messages carefully, and build real projects.</p>
+        <p>Interactive Developer Learning Hub &bull; Built for beginners.</p>
     </footer>
 
-    <script src="app.js"></script>
 </body>
 </html>
