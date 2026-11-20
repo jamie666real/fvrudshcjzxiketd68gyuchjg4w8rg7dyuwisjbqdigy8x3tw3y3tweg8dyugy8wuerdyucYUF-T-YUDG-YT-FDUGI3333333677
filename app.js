@@ -1,18 +1,21 @@
 let pyodideInstance = null;
 
-// Initialize Pyodide when the page loads
 async function initPyodide() {
     const statusBadge = document.getElementById("py-status");
     try {
-        pyodideInstance = await loadPyodide();
+        pyodideInstance = await loadPyodide({
+            indexURL: "https://jsdelivr.net"
+        });
         statusBadge.innerText = "✅ Interactive Python 3.11 Ready!";
         statusBadge.style.borderColor = "#4ade80";
         statusBadge.style.color = "#bbf7d0";
     } catch (err) {
-        statusBadge.innerText = "⚠️ Offline mode (Python engine failed to load)";
+        console.error("Pyodide load error:", err);
+        statusBadge.innerText = "⚠️ Python engine error: " + err.message;
     }
 }
 initPyodide();
+
 
 // Run user Python code and capture print() output
 async function runPython(textareaId, outputId) {
